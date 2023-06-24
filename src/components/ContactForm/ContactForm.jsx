@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import { FaUserPlus, FaTty, FaUserAlt } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
+import { addContact } from 'redux/contacts/operations';
 import { getContacts } from 'redux/selectors';
 
 const ContactForm = () => {

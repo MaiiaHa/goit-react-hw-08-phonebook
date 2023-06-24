@@ -2,7 +2,7 @@ import { ReactComponent as DeleteIcon } from '../../icons/delete.svg';
 import PropTypes from 'prop-types';
 import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact, fetchContacts } from 'redux/operations';
+import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import { useEffect } from 'react';
 import { getContacts, getFilter } from 'redux/selectors';
 
