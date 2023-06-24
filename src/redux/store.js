@@ -26,7 +26,7 @@ import { contactsReducer } from './slice';
 import { filterReducer } from './slice';
 import { authReducer } from './auth/slice';
 
-const authPersistConfig = {
+const persistConfig = {
   key: 'auth',
   storage,
   whitelist: ['token'],
@@ -40,7 +40,7 @@ const authPersistConfig = {
 
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(authPersistConfig, authReducer),
+    auth: persistReducer(persistConfig, authReducer),
     contacts: contactsReducer,
     // isActive: isActiveSlice.reducer,
     filter: filterReducer,

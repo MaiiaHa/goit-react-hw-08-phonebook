@@ -1,5 +1,8 @@
 //Contacts
-export const getContacts = state => state.contacts.items;
+export const getContacts = state => {
+  console.log(state.contacts.items);
+  return state.contacts.items;
+};
 export const getFilter = state => state.filter;
 
 //Auth
