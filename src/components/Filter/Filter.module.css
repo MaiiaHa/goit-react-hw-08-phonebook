@@ -1,12 +1,13 @@
 .inputFind {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
-  padding-left: 20px;
+  /* padding-left: 20px; */
   align-items: center;
   font-weight: 600;
 }
 .inputFindField {
-  border-color: #3888cf;
-  padding: 4px;
+  width: 100%;
+  /* border-color: #3888cf;
+  padding: 4px; */
 }

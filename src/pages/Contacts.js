@@ -10,11 +10,13 @@ export default function Contacts() {
 
   return (
     <>
-      <Container title="Phonebook">
+      <Container>
+        {/* title="Phonebook" */}
         <ContactForm />
       </Container>
 
-      <Container title="Contacts">
+      <Container>
+        {/* title="Contacts" */}
         <Filter />
         <ContactList />
         <div>{isLoading && 'Request in progress...'}</div>

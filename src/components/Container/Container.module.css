@@ -1,14 +1,14 @@
 .section {
-  width: 500px;
+  width: 300px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 
-  color: #3888cf;
+  /* color: #3888cf;
   background-color: #ffdba1;
 
   border: 1px solid #3888cf;
-  box-shadow: 0 4px 4px #c9984b;
+  box-shadow: 0 4px 4px #c9984b; */
 }
 .sectionTitle {
   display: flex;

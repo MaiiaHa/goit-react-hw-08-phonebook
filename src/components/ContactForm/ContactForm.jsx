@@ -1,9 +1,10 @@
 import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
-import { FaUserPlus, FaTty, FaUserAlt } from 'react-icons/fa';
+import { FaUserPlus } from 'react-icons/fa'; //, FaTty, FaUserAlt
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { getContacts } from 'redux/selectors';
+import { Button, TextField } from '@mui/material';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -40,9 +41,9 @@ const ContactForm = () => {
   return (
     <form className={css.contacts} action="" onSubmit={formSubmit}>
       <label className={css.input}>
-        <FaUserAlt width={160} height={160} />
-        <span className={css.inputName}>Name:</span>
-        <input
+        {/* <FaUserAlt width={160} height={160} /> */}
+        {/* <span className={css.inputName}>Name:</span> */}
+        {/* <input
           className={css.inputField}
           type="text"
           name="name"
@@ -51,11 +52,22 @@ const ContactForm = () => {
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
+        /> */}
+        <TextField
+          id={nameRandomId}
+          className={css.inputField}
+          type="text"
+          name="name"
+          label="Name Surname"
+          variant="standard"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
         />
       </label>
       <label className={css.input}>
-        <FaTty />
-        <span className={css.inputName}>Number:</span>
+        {/* <FaTty /> */}
+        {/* <span className={css.inputName}>Number:</span>
         <input
           className={css.inputField}
           type="tel"
@@ -65,12 +77,32 @@ const ContactForm = () => {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
+        /> */}
+        <TextField
+          id={numberRandomId}
+          className={css.inputField}
+          type="tel"
+          name="number"
+          label="555-55-55"
+          variant="standard"
+          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+          required
         />
       </label>
-      <button className={css.inputBtn} type="submit" aria-label="Add contact">
+      {/* <button className={css.inputBtn} type="submit" aria-label="Add contact">
         <FaUserPlus />
         Add contact
-      </button>
+      </button> */}
+      <Button
+        className={css.inputBtn}
+        variant="contained"
+        type="submit"
+        aria-label="Add contact"
+      >
+        <FaUserPlus />
+        Add contact
+      </Button>
     </form>
   );
 };

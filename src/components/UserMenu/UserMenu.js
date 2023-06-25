@@ -3,7 +3,8 @@ import { logOut } from 'redux/auth/operations';
 import { useAuth } from '../../Hooks/useAuth';
 import css from './UserMenu.module.css';
 import { Avatar, Button } from '@mui/material';
-import { deepOrange } from '@mui/material/colors';
+// import { deepOrange } from '@mui/material/colors';
+import { stringAvatar } from 'styles/Avatar';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -11,13 +12,12 @@ export const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <Avatar sx={{ bgcolor: deepOrange[500] }}>A</Avatar>
+      <Avatar {...stringAvatar(user.name)} />
+      {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>A</Avatar> */}
       <p className={css.username}>Welcome, {user.name}</p>
-      {/* <button type="button" onClick={() => dispatch(logOut())}>
-        Logout
-      </button> */}
       <Button
         variant="contained"
+        // variant="text"
         size="medium"
         onClick={() => dispatch(logOut())}
       >

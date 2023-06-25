@@ -1,11 +1,6 @@
-// import Container from './Container/Container';
-// import ContactForm from './ContactForm/ContactForm';
-// import Filter from './Filter/Filter';
-// import ContactList from './ContactList/ContactList';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { lazy, useEffect } from 'react';
-// import { useDispatch } from 'react-redux';
 import { RestrictedRoute } from './RestrictedRout';
 import { PrivateRoute } from './PrivateRoute';
 import { useDispatch } from 'react-redux';
@@ -56,12 +51,3 @@ export default function App() {
     </Routes>
   );
 }
-// <div>
-//   <Container title={'Phonebook'}>
-//     <ContactForm />
-//   </Container>
-//   <Container title={'Contacts'}>
-//     <Filter />
-//     <ContactList />
-//   </Container>
-// </div>

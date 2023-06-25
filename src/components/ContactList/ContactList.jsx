@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import { useEffect } from 'react';
 import { getContacts, getFilter } from 'redux/selectors';
+import { IconButton, ListItem } from '@mui/material';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -32,17 +33,35 @@ const ContactList = () => {
   return (
     <ul className={css.list}>
       {contacts.map(({ id, name, number }) => (
-        <li className={css.listItem} key={id}>
-          {name}: {number}
-          <button
-            className={css.btn}
-            type="button"
+        <ListItem
+          className={css.listItem}
+          key={id}
+          height={400}
+          width={360}
+          itemSize={46}
+          itemCount={200}
+          overscanCount={5}
+        >
+          {name}: <br />
+          {number}
+          <IconButton
+            aria-label="delete"
             onClick={() => deleteContacts(id)}
-            aria-label="Delete contact"
+            color="primary"
           >
-            <DeleteIcon fill="white" />
-          </button>
-        </li>
+            <DeleteIcon />
+          </IconButton>
+        </ListItem>
+        // <li className={css.listItem} key={id}>
+        //   {name}: {number}
+        //   <IconButton
+        //     aria-label="delete"
+        //     onClick={() => deleteContacts(id)}
+        //     color="primary"
+        //   >
+        //     <DeleteIcon />
+        //   </IconButton>
+        // </li>
       ))}
     </ul>
   );
