@@ -29,9 +29,9 @@ const ContactForm = () => {
 
     dispatch(
       addContact({
-        id: nanoid(5),
+        id: nanoid(10),
         name: form.elements.name.value,
-        phone: form.elements.number.value,
+        number: form.elements.number.value,
       })
     );
     form.reset();

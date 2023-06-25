@@ -1,13 +1,9 @@
 //Contacts
-export const getContacts = state => {
-  // console.log(state.contacts.items);
-  return state.contacts.items;
-};
+export const getContacts = state => state.contacts.items;
 export const getFilter = state => state.filter;
+export const selectLoading = state => state.contacts.isLoading;
 
 //Auth
 export const selectIsLoggedIn = state => state.auth.isLoggedIn;
-
 export const selectUser = state => state.auth.user;
-
 export const selectIsRefreshing = state => state.auth.isRefreshing;

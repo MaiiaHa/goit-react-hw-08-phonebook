@@ -31,9 +31,9 @@ const ContactList = () => {
 
   return (
     <ul className={css.list}>
-      {contacts.map(({ id, name, phone }) => (
+      {contacts.map(({ id, name, number }) => (
         <li className={css.listItem} key={id}>
-          {name}: {phone}
+          {name}: {number}
           <button
             className={css.btn}
             type="button"
