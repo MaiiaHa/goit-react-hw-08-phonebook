@@ -6,10 +6,7 @@ export const getContacts = state => {
 export const getFilter = state => state.filter;
 
 //Auth
-export const selectIsLoggedIn = state => {
-  // console.log(state);
-  return state.auth.isLoggedIn;
-};
+export const selectIsLoggedIn = state => state.auth.isLoggedIn;
 
 export const selectUser = state => state.auth.user;
 
