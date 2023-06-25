@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
-import { FaUserPlus } from 'react-icons/fa'; //, FaTty, FaUserAlt
+import { FaUserPlus } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/operations';
 import { getContacts } from 'redux/selectors';
@@ -41,18 +41,6 @@ const ContactForm = () => {
   return (
     <form className={css.contacts} action="" onSubmit={formSubmit}>
       <label className={css.input}>
-        {/* <FaUserAlt width={160} height={160} /> */}
-        {/* <span className={css.inputName}>Name:</span> */}
-        {/* <input
-          className={css.inputField}
-          type="text"
-          name="name"
-          id={nameRandomId}
-          placeholder="Name Surname"
-          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-          required
-        /> */}
         <TextField
           id={nameRandomId}
           className={css.inputField}
@@ -66,18 +54,6 @@ const ContactForm = () => {
         />
       </label>
       <label className={css.input}>
-        {/* <FaTty /> */}
-        {/* <span className={css.inputName}>Number:</span>
-        <input
-          className={css.inputField}
-          type="tel"
-          name="number"
-          id={numberRandomId}
-          placeholder="555-55-55"
-          pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-          title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        /> */}
         <TextField
           id={numberRandomId}
           className={css.inputField}
@@ -90,10 +66,6 @@ const ContactForm = () => {
           required
         />
       </label>
-      {/* <button className={css.inputBtn} type="submit" aria-label="Add contact">
-        <FaUserPlus />
-        Add contact
-      </button> */}
       <Button
         className={css.inputBtn}
         variant="contained"

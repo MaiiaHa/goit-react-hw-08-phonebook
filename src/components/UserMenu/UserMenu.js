@@ -17,7 +17,6 @@ export const UserMenu = () => {
       <p className={css.username}>Welcome, {user.name}</p>
       <Button
         variant="contained"
-        // variant="text"
         size="medium"
         onClick={() => dispatch(logOut())}
       >

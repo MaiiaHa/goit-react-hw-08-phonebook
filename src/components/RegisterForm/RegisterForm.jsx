@@ -24,47 +24,31 @@ export const RegisterForm = () => {
     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
       <label className={css.label}>
         <TextField
-          // id="outlined-password-input"
           label="Username"
           type="text"
           name="name"
           autoComplete="current-password"
         />
-        {/* Username
-        <input type="text" name="name" /> */}
       </label>
       <label className={css.label}>
         <TextField
-          // id="outlined-password-input"
           label="Email"
           type="email"
           name="email"
           autoComplete="current-password"
         />
-        {/* Email
-        <input type="email" name="email" /> */}
       </label>
       <label className={css.label}>
         <TextField
-          // id="outlined-password-input"
           label="Password"
           type="password"
           name="password"
           autoComplete="current-password"
         />
-        {/* Password
-        <input type="password" name="password" /> */}
       </label>
-      <Button
-        // className={css.inputBtn}
-        variant="contained"
-        type="submit"
-        aria-label="Register"
-      >
+      <Button variant="contained" type="submit" aria-label="Register">
         Register
       </Button>
-
-      {/* <button type="submit">Register</button> */}
     </form>
   );
 };

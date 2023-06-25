@@ -52,16 +52,6 @@ const ContactList = () => {
             <DeleteIcon />
           </IconButton>
         </ListItem>
-        // <li className={css.listItem} key={id}>
-        //   {name}: {number}
-        //   <IconButton
-        //     aria-label="delete"
-        //     onClick={() => deleteContacts(id)}
-        //     color="primary"
-        //   >
-        //     <DeleteIcon />
-        //   </IconButton>
-        // </li>
       ))}
     </ul>
   );

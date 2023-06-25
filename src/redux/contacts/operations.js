@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
-// axios.defaults.baseURL = 'https://647f781fc246f166da90cd20.mockapi.io/api/v1/';
+import Notiflix from 'notiflix';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchAll',
@@ -10,6 +9,8 @@ export const fetchContacts = createAsyncThunk(
       const response = await axios.get('/contacts');
       return response.data;
     } catch (e) {
+      Notiflix.Notify.failure('Oops, something went wrong');
+
       return thunkAPI.rejectWithValue(e.message);
     }
   }
@@ -22,6 +23,7 @@ export const addContact = createAsyncThunk(
       const response = await axios.post('/contacts', data);
       return response.data;
     } catch (e) {
+      Notiflix.Notify.failure('Oops, something went wrong');
       return thunkAPI.rejectWithValue(e.message);
     }
   }
@@ -33,6 +35,7 @@ export const deleteContact = createAsyncThunk(
       const response = await axios.delete(`/contacts/${id}`);
       return response.data;
     } catch (e) {
+      Notiflix.Notify.failure('Oops, something went wrong');
       return thunkAPI.rejectWithValue(e.message);
     }
   }
